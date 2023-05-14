@@ -34,6 +34,7 @@ app.post("/posts", (req, res) => {
 
 app.delete("/posts/:id", (req, res) => {
     const postId = Number(req.params.id);
+    console.log(postId)
     const index = posts.findIndex((o) => o.id === postId);
     if (index !== -1) {
         posts.splice(index, 1);
